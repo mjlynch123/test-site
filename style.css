@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  width: 100vw;
+  font-family: 'Rye', cursive;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 20px auto;
+  font-size: 22px;
+}
+
+nav li {
+  list-style: none;
+  margin-inline-end: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.welcome {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 700px;
+}
+
+.welcome h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome button {
+    padding: 15px 55px;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.parallax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1617463499514-56f6ca16f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHRhdHRvbyUyMGFydGlzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-us {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: hsla(0, 0%, 65%, .7);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-content {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  margin: 30px;
+  text-align: center;
+  position: relative;
+  width: 100vw;
+}
+
+.about-content h1 {
+    font-size: 32px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#image-left, #image-right {
+  opacity: 0;
+  height: 350px;
+  width: 350px;
+  border: 1px solid black;
+  margin: 80px 110px;
+}
+
+#about-outro {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100vw;
+}
+
+#about-outro button {
+  width: 200px;
+  height: 45px;
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: 'Rye', cursive;
+  letter-spacing: 1px;
+}
+
+#about-outro button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px 3px #4d4d4d;
+}
+
+
+.our-artists {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px;
+  background-color: hsla(0, 0%, 0%, .7);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.our-artists h1 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+  margin-left: 12px;
+  font-size: 32px;
+}
+
+.artist-container {
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 120px;
+}
+
+#artist {
+  opacity: 1;
+  border: 1px solid white;
+  padding: 20px;
+  text-align: center;
+}
+
+.artist-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.artist-info {
+  color: white;
+}
+
+.contact-us {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px;
+  background-color: hsla(0, 0%, 65%, .7);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-content {
+  margin-top: 70px;
+  text-align: center;
+}
+
+input {
+  height: 40px;
+}
+
+textarea, input {
+  width: 75%;
+  margin: 5px;
+  border: none;
+  border-bottom: 4px solid black;
+  border-radius: 0px;
+  font-size: 16px;
+  background-color: hsla(0, 0%, 65%, .4);
+  outline: none;
+  color: white;
+}
+
+form button {
+  margin-left: 4px;
+  height: 65px;
+  width: 75.5%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.right, .slide-left {
+  opacity: 0;
+  animation: slideLeft 2s ease-in-out forwards;
+}
+
+.left, .slide-up {
+  opacity: 0;
+  animation: slideIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    font-size: 15px;
+    margin-left: -20px;
+  }
+
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .welcome p {
+    font-size: 15px;
+    width: 90vw;
+    margin: 5px auto;
+  }
+
+  .about-us {
+    height: auto;
+  }
+
+  .images {
+    flex-direction: column;
+    width: 100%; 
+  }
+
+  #image-left, #image-right {
+    margin: 20px auto;
+  }
+
+  .our-artists {
+    height: auto;
+    opacity: 1;
+  }
+
+  .artist-container {
+    margin-top: 20px;
+  }
+
+  textarea, input {
+    width: calc(100% - 5px);
+    margin: 5px auto;
+  }
+
+  form button {
+    margin-left: 0px;
+    height: 65px;
+    width: 100%;
+  }
+}
